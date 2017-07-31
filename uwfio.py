@@ -7,4 +7,6 @@ turtle.onkeypress(speed_f, "space")
 turtle.listen()
 while True:
     turtle.forward(speed)
+    turtle.right(speed)
+    
 turtle.mainloop()
