@@ -15,11 +15,11 @@ turtle.setup(SIZE_X, SIZE_Y)
 turtle.bgcolor("black")
 
 turtle.penup()
-
+turtle.goto(-200,-200)
 SQUARE_SIZE = 20
-START_LENGTH = 10
+START_LENGTH = 1
 
-SPEED = 50
+SPEED = 10
 
 ## Initialize lists
 pos_list = []
@@ -39,7 +39,6 @@ turtle.hideturtle()
 ## Draw a snake at the start of the game with a for loop
 ## for loop should use range() and coount up to the number of pieces
 ## in the snake (i.e. START_LENGTH)
-
 for i in range(START_LENGTH):
     x_pos = snake.pos()[0]
     y_pos = snake.pos()[1]
@@ -117,35 +116,36 @@ def move_snake():
     
     if direction == RIGHT:
         snake.goto(x_pos + SQUARE_SIZE, y_pos)
-        print("You moved Right!")
 
     elif direction == LEFT:
         snake.goto(x_pos - SQUARE_SIZE, y_pos)
-        print("You moved Left!")
-
     elif direction == DOWN:
         snake.goto(x_pos, y_pos - SQUARE_SIZE)
-        print("You moved Down!")
-
     elif direction == UP:
         snake.goto(x_pos, y_pos + SQUARE_SIZE)
-        print("You moved Up!")
 
-    #Stamp new element and append new stamp in list
-    #Remember: The snake position changed - update my_pos()
+###
+turtle.penup()
+enemy = snake.clone()
+enemy.goto(300,300)
+
+###
+def move_snake():
+
+        #Remember: The snake position changed - update my_pos()
     my_pos = snake.pos()
     pos_list.append(my_pos)
 
     new_stamp = snake.stamp()
     stamp_list.append(new_stamp)
-    ######## SPECIAL PLACE - Remember it for Part 5
-    #pop zeroth element in pos_list to get rid of last the last
-    #piece of the tail
+        ######## SPECIAL PLACE - Remember it for Part 5
+        #pop zeroth element in pos_list to get rid of last the last
+        #piece of the tail
     old_stamp = stamp_list.pop(0)
     snake.clearstamp(old_stamp)
     pos_list.pop(0)
 
-    #Add new lines to the end of the function
+        #Add new lines to the end of the function
     #Grab position of snake
     new_pos = snake.pos()
     new_x_pos = new_pos[0]
@@ -181,47 +181,3 @@ def move_snake():
     turtle.ontimer(move_snake, TIME_STEP)
 
 move_snake()
-'''
-def make_food():
-    #The screen positions go from -SIZE/2 to +SIZE/2
-    #But we need to make food pieces only appear on game squares
-    #So we cut up the game board into multiples of SQUARE_SIZE.
-    min_x=-int(SIZE_X/2/SQUARE_SIZE)+1
-    max_x=int(SIZE_X/2/SQUARE_SIZE)-1
-    min_y=-int(SIZE_Y/2/SQUARE_SIZE)-1
-    max_y=int(SIZE_Y/2/SQUARE_SIZE)+1
-    #Pick a position that is a random multiple of SQUARE_SIZE
-    food_x = random.randint(min_x,max_x)*SQUARE_SIZE
-    food_y = random.randint(min_y,max_y)*SQUARE_SIZE
-    ##1.WRITE YOUR CODE HERE: Make the food turtle go to the randomly-generated
-    ## position
-    food.goto(this_food_pos[0], this_food_pos[1])
-    ##2.WRITE YOUR CODE HERE: Add the food turtle's position to the food positions list
-    food_pos.append((food_x, food_y))
-    ##3.WRITE YOUR CODE HERE: Add the food turtle's stamp to the food stamps list
-    foodStamp = food.stamp()
-    food_stamps.append(foodStamp)
-    ##3.WRITE YOUR CODE HERE: Add the food turtle's stamp to the food stamps list
-
-
-
-turtle.register_shape("trash.gif")
-food = turtle.clone()
-food.shape("trash.gif")
-food.hideturtle()
-#Locations of food
-food_pos = [(100,100), (-100,100), (-100,-100), (100,-100)]
-food_stamps = []
-'''
-# Write code that:
-#1. moves the food turtle to each food position
-#2. stamps the food turtle at that location
-#3. saves the stamp by appending it to the food_stamps list using
-# food_stamps.append( )
-#4. Don’t forget to hide the food turtle!
-'''
-for this_food_pos in food_pos:
-    food.goto(this_food_pos[0], this_food_pos[1])
-    foodStamp = food.stamp()
-    food_stamps.append(foodStamp)
-    '''

@@ -4,7 +4,7 @@ print("------------------------------------------------------------")
 #what happens in different cases(ques1)
 if ques1 == "y" or ques1=="yes":
     #second question
-    ques2 = input("you are getting into a fight with anonymus robbers, you see a gun with your eye. if you want to fight press y. if you wanna run away, press n")
+    ques2 = input("you are getting into a fight with anonymus robbers, you see a gun with your eye. if you want to fight press y. if you wanna run away, press n! ")
     print("------------------------------------------------------------")
     #what happens in different cases(ques2)
     if ques2 == 'y' or ques2 == 'yes':
@@ -25,9 +25,16 @@ if ques1 == "y" or ques1=="yes":
 
             elif ques4 == "n":
                 #fifth question
-                ques5 = input("you were running to pick the gun off the floor, but the old man escaped. you are going to your car, and when you are close to your home, ")
-                print("------------------------------------------------------------")
-
+                ques5 = print("you were running to pick the gun off the floor, but the old man escaped.")
+                print('--------------------------------------------------------------------------------------')
+                print(" you are going to your car, and when you are close to your home, the old man jumps on you from the bushes and you started wresling!")
+                ques5 = input('would you like continue wresling with him?press y.would you like shut your door house in his face?press n!')
+                if ques5 == 'n':
+                      print('are you afraid?chicken! GAME OVER!')
+                else:
+                      print('you continued wresling with the old man,he knocked you out!you woke up in a small room,and you body is tight!')
+                      print('the old man walks into the room.he says:"hello ,nice to meet you,my dear son!!!')
+                      print('will be continued!!!!!')
             else:
                 print("GAME OVER!")
         else:
