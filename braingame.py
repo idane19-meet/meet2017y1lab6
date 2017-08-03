@@ -23,6 +23,7 @@ def story1():
                 print('will you fight with him(he looks strong) (y), you are going to pick up the gun you kicked before in order to shoot him (n), you let him escape(z)')
                 #fourth question
                 ques4 = input()
+                
                 print("------------------------------------------------------------")
                 #what happens in different cases(ques4)
                 if ques4 == "y":
@@ -55,7 +56,7 @@ def story2():
             if ques3 == 's':
                 ques4 = input("you fell asleep.you woke up in the middle of the night, and heard 2 faires talking quitley,the said something about sacrifaice the human,press g to go and ask them. press s to sleep")
                 if ques4 == 's':
-                        print("you woke up above a lava mountain,and you heared a lot of noise.the queen of the faires yelled:'the glourius day arrived!we are sacreficing the human to you god,for releace as from our curse.the rope that holds you was started burning.the rope ripped apart.")
+                        print("you woke up above a lava mountain,and you heared a lot of noise.fairs cheering and boozing.the queen of the faires yelled:'the glourius day arrived!we are sacreficing the human to you god,for releace as from our curse.the rope that holds you was started burning.the rope ripped apart.")
                         print('WILL BE CONTINUE!!!')
                 else:
                     print('you were asking what they are talking about and they put a spell on you.you appered on mars.GAME OVER')
