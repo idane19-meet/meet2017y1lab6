@@ -1,0 +1,20 @@
+story1 questions:
+
+ques1 = print("you are walking into a bar. in the right, u see old man getting robbed. will you help him? (y/n)")
+
+ques2 = print("you are getting into a fight with anonymus robbers, you see a gun with your eye. if you want to fight press y. if you wanna run away, press n! ")
+
+ques3 = print('the robber pulled the gun on you. would you like to unarm him? if so press y!')
+
+ques4 = print("he knocked you out, you woke up in antartica, NAKED, game over!")
+
+ques5 = print("you were running to pick the gun off the floor, but the old man escaped.")
+                print("when you went back to your hosue, the old man jumps on you from the bushes and you started wresling!")
+                print('would you like continue wresling with him?press y.would you like shut your door house in his face?press n!')
+                print('you continued wresling with the old man,he knocked you out!you woke up in a small room,and you body is tight!')
+                      print('the old man walks into the room.he says:"hello ,nice to meet you,my dear son!!!')
+                      print('will be continued!!!!!')
+
+story2 questions:
+ques1 = print("you was hiking with you friends on the everest.blizzard came, and caught you surprised.after the blizzard you could not find your friends.couple of bears are chasing you right now.press y to keep runing(you won't last long).press n to climb on a tree.
+
