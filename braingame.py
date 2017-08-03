@@ -55,7 +55,8 @@ def story2():
             if ques3 == 's':
                 ques4 = input("you fell asleep.you woke up in the middle of the night, and heard 2 faires talking quitley,the said something about sacrifaice the human,press g to go and ask them. press s to sleep")
                 if ques4 == 's':
-                        input("")
+                        print("you woke up above a lava mountain,and you heared a lot of noise.the queen of the faires yelled:'the glourius day arrived!we are sacreficing the human to you god,for releace as from our curse.the rope that holds you was started burning.the rope ripped apart.")
+                        print('WILL BE CONTINUE!!!')
                 else:
                     print('you were asking what they are talking about and they put a spell on you.you appered on mars.GAME OVER')
                               
@@ -72,6 +73,7 @@ a_list.append(story2)
 x = random.randint(1,2)
 if x == 1:
     story1()
-    
 else:
     story2()
+
+ 
